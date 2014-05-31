@@ -18,7 +18,7 @@ class BootalertServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('maksimkurb/bootalert');
+		$this->package('maksimkurb/bootalert', 'bootalert');
 	}
 
 	/**
