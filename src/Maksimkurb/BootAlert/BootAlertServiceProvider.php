@@ -1,8 +1,10 @@
-<?php namespace Maksimkurb\Bootalert;
+<?php
+
+namespace Maksimkurb\BootAlert;
 
 use Illuminate\Support\ServiceProvider;
 
-class BootalertServiceProvider extends ServiceProvider {
+class BootAlertServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
