@@ -3,7 +3,7 @@ BootAlert
 
 This package designed specially (but can be reconfigured) for Bootstrap 3 and Laravel 4 and will allow you to add system notifications for the user in queue from which they will be removed after display to the user.
 
-### Package installation:
+## Package installation:
 
 Modify your composer.json to match this:
 ```json
@@ -28,16 +28,20 @@ Next, you should add these rows to your ``` config/app.php ```
 
 	'aliases' => array(
 	   ...
-
+       'BootAlert' => 'Maksimkurb\BootAlert\BootAlert',
 	),
 	...
 ```
 
-By default, this plugin already configured to use it with Twitter Bootstrap 3, but if you like, you can edit configuration to use it in any laravel project as you like.
+By default, this plugin already configured to use it with Twitter Bootstrap 3, but you can edit configuration as you like.
+
 To publish config files run:
 ``` php artisan config:publish maksimkurb/bootalert ```
 
-### Using
+## Using
+
+### Add alerts to user session
+
 To add new alert to user session run:
 ```php
     BootAlert::add($type, $message, $dismissable=true);
@@ -52,4 +56,10 @@ Also you can add validators to BootAlerts:
 ```
 This function add all validator errors to user session and can be displayed after. For now, BootAlert couldn't use per-alert type - you can choose only one for all validator messages (or parse they with ``` BootAlert::add(...) ``` by hands)
 
+### Display alerts to user
 
+You can get HTML code with all alerts of user as follows:
+```php
+BootAlert::display();
+```
+*NOTE*: This function return alerts only once, so after their displaying, they will removed from alerts array and you shouldn't care about old alerts removing.
