@@ -28,7 +28,7 @@ class BootAlert {
         if($validator->fails()) {
             foreach($validator->messages()->all() as $error)
             {
-                BootAlert::addToQueue($type, $error, $dismissable);
+                BootAlert::add($type, $error, $dismissable);
             }
         }
     }
