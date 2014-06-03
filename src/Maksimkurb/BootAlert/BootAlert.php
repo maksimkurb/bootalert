@@ -8,6 +8,8 @@
 
 namespace Maksimkurb\BootAlert;
 
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Session;
 
 class BootAlert {
 
@@ -26,7 +28,7 @@ class BootAlert {
         if($validator->fails()) {
             foreach($validator->messages()->all() as $error)
             {
-                CakeAlert::addToQueue($type, $error, $dismissable);
+                BootAlert::addToQueue($type, $error, $dismissable);
             }
         }
     }
