@@ -15,7 +15,7 @@ return array(
          * %dm-button  - Button/link, which will be added to alert, if it is dismissable. (see information below)
          * %message    - Alert message.
          *
-         * By default there are template of BS3 alert.
+         * By default there is template of BS3 alert.
          *
          */
         'template' => '<div class="alert %type-class %dm-class">%dm-button %message</div>',
