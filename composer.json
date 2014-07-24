@@ -19,7 +19,7 @@
             "src/migrations"
         ],
         "psr-0": {
-            "Maksimkurb\\Bootalert\\": "src/"
+            "Maksimkurb\\BootAlert\\": "src/"
         }
     },
     "minimum-stability": "stable"
